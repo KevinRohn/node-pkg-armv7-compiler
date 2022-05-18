@@ -1,0 +1,27 @@
+name: 'node pkg armv7 compiler'
+author: Kevin Rohn
+description: 'Create binary executable for armv7 from nodejs'
+inputs:
+  nodejs-app-path: 
+    description: 'Path to the nodejs app'
+    required: true
+
+  binary-output-path: 
+    description: 'Output path of the binary app'
+    required: true
+
+  node-version:
+    description: 'Specific node version - input format: node<14|16|18>'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.nodejs-app-path }}
+    - ${{ inputs.binary-output-path }}
+    - ${{ inputs.node-version }}
+
+branding:
+  icon: 'package'
+  color: 'green'
