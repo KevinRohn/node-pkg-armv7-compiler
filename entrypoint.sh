@@ -20,6 +20,7 @@ else
 fi
 
 # Install packages first
-npm --prefix $INPUT_PATH install
+npm --prefix $INPUT_PATH install --only=production
 
-pkg package.json --target "$NODE_VERSION"-linux-armv7 --out-path $OUTPUT_PATH
+INPUT_CLEAN_PATH=$(echo $INPUT_PATH | tr -s /)
+pkg "$INPUT_CLEAN_PATH"/package.json --target "$NODE_VERSION"-linux-armv7 --out-path $OUTPUT_PATH
