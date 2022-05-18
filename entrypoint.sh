@@ -19,6 +19,10 @@ else
   fi
 fi
 
+if [[ -d $4 ]]; then
+  export PKG_CACHE_PATH="$4"
+fi
+
 # Install packages first
 npm --prefix $INPUT_PATH install --only=production
 

@@ -14,6 +14,10 @@ inputs:
     description: 'Specific node version - input format: node<14|16|18>'
     required: true
 
+  cache-directory:
+    description: 'Path to custom cache directory'
+    required: false
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
