@@ -25,6 +25,7 @@ runs:
     - ${{ inputs.nodejs-app-path }}
     - ${{ inputs.binary-output-path }}
     - ${{ inputs.node-version }}
+    - ${{ inputs.cache-directory }}
 
 branding:
   icon: 'package'
