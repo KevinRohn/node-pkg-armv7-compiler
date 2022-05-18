@@ -1,4 +1,4 @@
-FROM arm32v7/ubuntu:latest
+FROM --platform=linux/arm/v7 arm32v7/ubuntu:latest
 
 RUN apt-get update && apt-get install -y make \
     gcc \
