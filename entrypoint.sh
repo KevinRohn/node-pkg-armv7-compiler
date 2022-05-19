@@ -27,4 +27,4 @@ fi
 npm --prefix $INPUT_PATH install --only=production
 
 INPUT_CLEAN_PATH=$(echo $INPUT_PATH | tr -s /)
-pkg "$INPUT_CLEAN_PATH"/package.json --target "$NODE_VERSION"-linux-armv7 --out-path $OUTPUT_PATH --compress GZip
+pkg "$INPUT_CLEAN_PATH"/package.json --target "$NODE_VERSION"-linuxstatic-armv7 --out-path $OUTPUT_PATH --compress GZip
